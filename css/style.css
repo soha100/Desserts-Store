@@ -1,0 +1,364 @@
+:root {
+  --main-color: #ce3c83;
+  --background-color: #f7f0f4;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.special {
+  font-family: "Krona One", sans-serif;
+  font-weight: bold;
+  color: var(--main-color);
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+.special::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+  bottom: -30px;
+}
+.special::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -36px;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  background-color: white;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* start header */
+.header {
+  background-color: white;
+  height: 65px;
+  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 10%);
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo img {
+  width: 160px;
+}
+.header .nav {
+}
+.header .nav ul {
+  display: flex;
+  gap: 25px;
+  font-size: 20px;
+}
+.header .nav ul a {
+  color: black;
+}
+.header .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+.header .social-icons a {
+  color: black;
+}
+/* end header */
+
+/* start home */
+.landing {
+  background-image: url("../images/landing-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: calc(100vh - 65px);
+  position: relative;
+  transition: background-image 0.5s ease;
+}
+.landing .overlay {
+  position: absolute;
+  background-color: rgb(0 0 0 / 60%);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.landing .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+  width: 45%;
+  z-index: 100;
+  color: white;
+}
+.landing .content h1 {
+  font-size: 40px;
+  font-weight: bold;
+  /* line-height: 1; */
+}
+.landing .content h1 span {
+  color: var(--main-color);
+}
+/* end home */
+
+/* start about */
+.about {
+  padding-top: 100px;
+}
+.about .container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 5px;
+  padding-top: 40px;
+}
+.about .img img {
+  width: 100%;
+}
+.about .content {
+  background-color: var(--background-color);
+  position: relative;
+  padding: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.about .content h2 {
+  margin-bottom: 20px;
+}
+.about .content p {
+  font-size: 18px;
+}
+/* end about */
+/* start menu page */
+.menu {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.menu .search {
+  padding-top: 50px;
+  margin-bottom: 40px;
+}
+.menu .search ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.menu .search ul li {
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--main-color);
+  padding: 5px;
+}
+.menu .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+.menu .products .box {
+  position: relative;
+  overflow: hidden;
+}
+.menu .products .box:hover .content {
+  bottom: 0;
+}
+.menu .products .box:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+.menu .products .box img {
+  max-width: 100%;
+}
+.menu .products .box .content {
+  position: absolute;
+  width: 100%;
+  background-color: var(--background-color);
+  bottom: -100%;
+  left: 0;
+  padding: 10px;
+  transition: 0.3s;
+}
+.menu .products .box .content h3 {
+  font-size: 25px;
+  color: var(--main-color);
+}
+/* end menu page */
+/* start order */
+.order {
+  background-image: url("../images/order.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: calc(100vh - 65px);
+  position: relative;
+  padding-top: 20px;
+}
+.order .container {
+  padding-top: 50px;
+  z-index: 100;
+}
+.order form {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  /* height: 200px; */
+  column-gap: 30px;
+  row-gap: 10px;
+  z-index: 100;
+}
+.order form .box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.order form input {
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+.order form label {
+  color: black;
+  font-size: 20px;
+}
+.order button {
+  margin-top: 50px;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+/* end order */
+
+/* start footer */
+footer {
+  background-color: #212934;
+  padding-top: 30px;
+}
+footer .boxs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  color: white;
+}
+footer .box h3 {
+  font-size: 30px;
+  position: relative;
+}
+footer .box .active {
+  color: var(--main-color);
+}
+footer .box h3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #2d343f;
+  left: 0;
+  top: 50px;
+}
+footer .box ul {
+  padding-left: 0;
+  cursor: pointer;
+}
+footer .box ul li {
+  padding-top: 10px;
+}
+footer .box ul li a {
+  color: white;
+}
+footer .foot {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+footer .foot::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #2d343f;
+  left: 0;
+  top: 5px;
+}
+footer .foot .social i {
+  color: white;
+  font-size: 20px;
+  border: 1px solid #2d343f;
+  border-radius: 50%;
+  padding: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+footer .foot form {
+  display: flex;
+}
+footer .foot form input[type="email"] {
+  padding: 10px;
+  background-color: #212934;
+  border: 1px solid #2d343f;
+  border-radius: 3px;
+  border-right: none;
+}
+footer .foot form input[type="email"]:focus {
+  outline: none;
+}
+footer .foot form input[type="button"] {
+  background-color: var(--main-color);
+  color: white;
+  border: 1px solid #2d343f;
+  border-radius: 3px;
+  border-left: none;
+  cursor: pointer;
+}
+footer .copyright {
+  background-color: #1d242d;
+  color: white;
+  padding: 10px;
+}
+footer .copyright p {
+  padding-left: 50px;
+  font-size: 18px;
+}
+/* end footer */
