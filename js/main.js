@@ -1,3 +1,12 @@
+// toggle menu
+let list = document.querySelector(".list");
+let icon = document.querySelector(".header .icon");
+
+icon.addEventListener("click", function () {
+  list.classList.toggle("toggle-menu");
+});
+
+// slideShow
 let landing = document.querySelector(".landing");
 
 let arr = [
