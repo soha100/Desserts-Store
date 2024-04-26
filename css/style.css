@@ -8,6 +8,11 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+@font-face {
+  font-family: "Abhaya Libre";
+  src: url("../webfonts/abhaya/AbhayaLibre-Bold.ttf") format(truetype);
+  /* font-weight: ; */
+}
 html,
 body {
   scroll-behavior: smooth;
