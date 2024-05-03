@@ -10,7 +10,8 @@
 }
 @font-face {
   font-family: "Abhaya Libre";
-  src: url("../webfonts/abhaya/AbhayaLibre-Bold.ttf") format(truetype);
+  src: url("../Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf")
+    format(truetype);
   /* font-weight: ; */
 }
 html,
